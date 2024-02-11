@@ -1,28 +1,42 @@
 import React from "react";
- import { Link, NavLink } from "react-router-dom";
-// import '../CSS/navbar.css'; // Assuming you have a CSS file named Navbar.css
-
-const Navbar = () => {
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import "../CSS/navbar.css"; // Import your CSS file
+import scrollTop from "../pages/home.jsx";
+const Navbar = ({ scrollTop }) => {
+    // Destructure scrollTop from props
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
-                <ul className="navbar-menu">
-                    <li className="navbar-item">
-                        <NavLink to="/home.jsx" activeClassName="active" className="navbar-links">Home</NavLink>
-                    </li>
-                    {/* <li className="navbar-item">
-                        <NavLink to="/about" activeClassName="active" className="navbar-links">About</NavLink>
-                    </li>
-                    <li className="navbar-item">
-                        <NavLink to="/services" activeClassName="active" className="navbar-links">Services</NavLink>
-                    </li>
-                    <li className="navbar-item">
-                        <NavLink to="/contact" activeClassName="active" className="navbar-links">Contact</NavLink>
-                    </li> */}
-                </ul>
-            </div>
-        </nav>
+      <nav className={`navbar ${scrollTop > 100 ? "scrolled" : ""}`}>
+        {/* Add a conditional className for styling */}
+        <ul className="navbar-list">
+        <li className="navbar-item">
+            <Link to="/" className="navbar-link">
+              CAMPUS BITES
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/" className="navbar-link">
+              Home
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/about" className="navbar-link">
+              About
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/contact" className="navbar-link">
+              Contact
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/Login" className="navbar-link">
+                Login
+            </Link>
+          </li>
+        </ul>
+      </nav>
     );
-};
+  };
+  
 
 export default Navbar;
