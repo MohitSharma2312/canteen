@@ -10,8 +10,8 @@ const homeData = {
   description: "Welcome to your homepage!",
   carouselItems: [
     {
-      image: "image1.jpg",
-      title: "Slide 1 Title",
+      image : "C:/web development/canteen/Canteen/src/assets/Humaaans - Friend Meeting.png", // Replace with your actual image URL
+      title: "Slide 1 Ttle",
       description: "Slide 1 Description",
     },
     // ... other carousel items
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} /> {/* Pass scrollTop to Navbar */}
-      <Carousel items={homeData.carouselItems} /> {/* Pass carousel items to Carousel */}
+      {/* <Carousel items={homeData.carouselItems} /> Pass carousel items to Carousel */}
       <section id="home" className="hero is-full height">
         <div className="hero-body">
           <div className="container has-text-centered">
