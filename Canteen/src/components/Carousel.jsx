@@ -2,54 +2,43 @@ import React, { useState, useEffect } from "react";
 import "../CSS/carousel.css"; // Import your CSS file
 
 const Carousel = ({ items }) => {
-  // Destructure items from props
-  const [index, setIndex] = useState(0); // Create a state for the current index of the carousel
-  const [length, setLength] = useState(items.length); // Create a state for the length of the items array
+  const [index, setIndex] = useState(0);
+  const [length, setLength] = useState(items.length);
 
-  // Set the length to match the current items length if it changes
   useEffect(() => {
     setLength(items.length);
   }, [items]);
 
-  // Increment the index by one
   const next = () => {
-    setIndex((index + 1) % length); // Use modulo (%) operator to loop back to 0
+    setIndex((index + 1) % length);
   };
 
-  // Decrement the index by one
   const prev = () => {
-    setIndex((index - 1 + length) % length); // Use modulo (%) operator to loop back to the last item
+    setIndex((index - 1 + length) % length);
   };
 
   return (
     <div className="carousel">
-      {/* Add a className for styling */}
       <div className="carousel-inner">
-        {/* Add a className for styling */}
         {items.map((item, i) => {
-          // Map the items array to JSX elements
           return (
             <div
-              className={`carousel-item ${i === index ? "active" : ""}`}
-              // Add a className for styling and a conditional className for the active item
+              className={`carousel-item glassmorphism ${i === index ? "active" : ""}`}
               key={i}
             >
-              <img src={item.image} alt={item.title} /> {/* Render the image */}
+              <img src={item.image} alt={item.title} />
               <div className="carousel-caption">
-                {/* Add a className for styling */}
-                <h2>{item.title}</h2> {/* Render the title */}
-                <p>{item.description}</p> {/* Render the description */}
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
               </div>
             </div>
           );
         })}
       </div>
       <button className="carousel-control-prev" onClick={prev}>
-        {/* Add a className for styling and an onClick handler */}
         Prev
       </button>
       <button className="carousel-control-next" onClick={next}>
-        {/* Add a className for styling and an onClick handler */}
         Next
       </button>
     </div>
