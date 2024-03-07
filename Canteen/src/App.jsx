@@ -3,11 +3,11 @@ import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.css'
-import './components/navbar.jsx'
+import './components/navbar.jsx';
 // import Navbar from './components/navbar.jsx'
 import Home from "../src/pages/home.jsx"
 import Login from "../src/pages/Login.jsx"
-
+import Item from '../src/pages/item.jsx';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true); // Correct usage
 
@@ -24,6 +24,7 @@ function App() {
       {/* ... */}
       <Routes>
         <Route path="/" element={<Navigate to={isAuthenticated ? '/home' : '/login'} replace />} />
+       
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route
           path="/home"
@@ -31,6 +32,10 @@ function App() {
             isAuthenticated ? <Home /> : <Navigate to="/login" replace />
           }
         />
+         <Route path="/item" 
+         element={
+          isAuthenticated ? <Item /> : <Navigate to="/login" replace />
+          } />
       </Routes>
       {/* ... */}
     </div>

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
 import card1 from "../assets/Humaaans - Friend Meeting.png";
 import card2 from "../assets/baking.png";
-
+import { useNavigate } from 'react-router-dom'; 
 const homeData = {
   title: "Your Awesome Website",
   description: "Welcome to your homepage!",
@@ -34,45 +34,16 @@ const homeData = {
         title: "Card 2 Title",
         description: "Card 2 Description",
       },
-      {
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },
-      {
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },{
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },{
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },{
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },{
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },
-      {
-        image : card2 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
-      },
+      
       // ... other card items
     ],
   };
 
 export default function Home() {
   const [scrollTop, setScrollTop] = useState(0);
-
+ const navigate = useNavigate(); 
   const handleScroll = () => {
+    
     const scrollY = window.scrollY;
     setScrollTop(scrollY);
   };
@@ -84,7 +55,10 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const handleSeeMore = () => {
+    navigate('/item'); // Navigate to Item page
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
@@ -97,15 +71,17 @@ export default function Home() {
         </div>
       </section>
       <div className="container">
-  <div className="card-grid">
-    {homeData.cardItems.map((item, index) => (
-      <div className="col-sm-4" key={index}>
-        <Card item={item} /> {/* Render Card */}
-      </div>
-    ))}
-  </div>
+      <div className="card-grid">
+      {homeData.cardItems.map((item, index) => (
+        <div className="col-sm-4" key={index}>
+          <Card item={item} /> {/* Render Card */}
+        </div>
+      ))}
+    </div>
 </div>
-
+<div className="see-more">
+        <button className="details" onClick={handleSeeMore} scrollTop={scrollTop} >See More&gt;&gt;</button> {/* Add See More button */}
+      </div>
       <Footer />
     </div>
   );

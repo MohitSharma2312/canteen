@@ -28,6 +28,7 @@ const Navbar = ({ scrollTop }) => {
               Contact
             </Link>
           </li>
+          
           <li className="navbar-item">
             <Link to="/Login" className="navbar-link">
                 Login

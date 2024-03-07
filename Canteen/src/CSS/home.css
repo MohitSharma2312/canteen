@@ -168,7 +168,7 @@
 }
 
 /* card */
-.card {
+/* .card {
   position: relative;
   width: 70%;
   overflow: hidden;
@@ -179,20 +179,20 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: transform 0.5s;
-}
+} */
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.05);
 }
 
 .card img {
   width: 90%; /* This will make the image take the full width of the card */
-  height: 100px; /* Adjust this value as needed */
-  object-fit: cover; /* This will scale the image to cover the space without distorting its aspect ratio */
-}
+  /* height: 100px; /* Adjust this value as needed */
+  /* object-fit: cover; /* This will scale the image to cover the space without distorting its aspect ratio */
 
 
-.card-body {
+
+/* .card-body {
   padding: 20px;
 }
 
@@ -204,24 +204,24 @@
 
 .card-text {
   margin-bottom: 20px;
-}
+} */
 
-.card .btn {
+/* .card .btn {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
   transition: background-color 0.5s;
-}
+} */
 
-.card .btn:hover {
+/* .card .btn:hover {
   background-color: #0056b3;
 }
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-}
+} */ 
 
 
 /* Home section styles */
@@ -243,6 +243,25 @@
 .hero p {
   color: #333;
   font-size: 24px;
+}
+.see-more {
+  width: 100%;
+  height: 80px;
+  background-color:none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.details:hover {
+  background-color: transparent;
+  transform: scale(1.5);
+}
+.details{
+  background-color:transparent;
+  border:none;
+  transition: 0.5s;
 }
 
 /* Footer styles */
