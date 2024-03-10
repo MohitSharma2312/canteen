@@ -1,4 +1,5 @@
 import React from 'react';
+import "../CSS/item.css";
 import { useNavigate } from 'react-router-dom';
 const Card = ({ item }) => {
   const navigate = useNavigate();

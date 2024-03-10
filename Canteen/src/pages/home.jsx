@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
+
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
 import card1 from "../assets/Humaaans - Friend Meeting.png";

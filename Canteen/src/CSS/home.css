@@ -232,7 +232,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image:linear-gradient(to bottom, #608F91, white);
+  background-image:linear-gradient(to bottom, #6ea2a4, white);
 
 }
 .hero h1 {
@@ -258,8 +258,8 @@
 }
 .see-more {
   width: 100%;
-  height: 80px;
-  background-color:none;
+  height: 8px;
+  
   display: flex;
   justify-content: center;
   margin-top: 20px;
