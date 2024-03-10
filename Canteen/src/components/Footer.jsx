@@ -4,6 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       {/* Add a className for styling */}
+    
       <p>© 2024 Your Awesome Website. All rights reserved.</p>
     </footer>
   );

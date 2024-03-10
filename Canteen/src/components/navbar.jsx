@@ -30,6 +30,8 @@ const Navbar = ({ scrollTop, isAuthenticated, }) => {
               Contact
             </Link>
           </li>
+
+
           {isAuthenticated ? (
             <li className="navbar-item">
               <img src={profilePic} alt="Profile" className="profile-pic" /> {/* Display profile picture when authenticated */}
@@ -37,6 +39,7 @@ const Navbar = ({ scrollTop, isAuthenticated, }) => {
           ) : (
             <li className="navbar-item">
               <Link to="/login" className="navbar-link">
+
                 Login
               </Link>
             </li>
