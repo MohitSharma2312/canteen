@@ -67,10 +67,10 @@ export default function Home() {
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">
-  <div className="hero-body">
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-6">
+         <div className="hero-body">
+         <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
           <div className="has-text-left">
             <h1>{homeData.title}</h1>
             <p>{homeData.description}
@@ -84,6 +84,10 @@ export default function Home() {
             <img src={card2} alt="Your Image" style={{ width: '110%' }} />
           </div>
         </div>
+        </div>
+        </div>
+        </div>
+        
 
       </section>
       <div className="container">
