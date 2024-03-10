@@ -8,11 +8,12 @@ import card1 from "../assets/Humaaans - Friend Meeting.png";
 import card2 from "../assets/baking.png";
 import { useNavigate } from 'react-router-dom'; 
 const homeData = {
-  title: "Your Awesome Website",
-  description: "Welcome to your homepage!",
+  title: "COLLEGE CRAVINGS",
+  image : card2,
+  description: "Indule Your Taste Buds in our Vibrant College Food Court!", 
   CarouselItems: [
     {
-      image : "Canteen\src\assets\Humaaans - Friend Meeting.png",
+      image : card2,
       title: "Slide 1 Ttle",
       description: "Slide 1 Description",
     },
@@ -24,6 +25,7 @@ const homeData = {
         title: "Card 2 Title",
         description: "Card 2 Description",
       },
+
       {
         image : card1 ,
         title: "Card 2 Title",
@@ -35,9 +37,11 @@ const homeData = {
         description: "Card 2 Description",
       },
       
+
       // ... other card items
     ],
-  };
+    Baking:[]
+};
 
 export default function Home() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -63,12 +67,24 @@ export default function Home() {
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">
-        <div className="hero-body">
-          <div className="container has-text-centered">
+  <div className="hero-body">
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-6">
+          <div className="has-text-left">
             <h1>{homeData.title}</h1>
-            <p>{homeData.description}</p>
+            <p>{homeData.description}
+            </p>
+            <a href="#about" className="btn btn-primary">About Us</a>
+            
           </div>
         </div>
+        <div className="col-sm-6">
+          <div className="has-text-right">
+            <img src={card2} alt="Your Image" style={{ width: '110%' }} />
+          </div>
+        </div>
+
       </section>
       <div className="container">
       <div className="card-grid">
@@ -81,6 +97,7 @@ export default function Home() {
 </div>
 <div className="see-more">
         <button className="details" onClick={handleSeeMore} scrollTop={scrollTop} >See More&gt;&gt;</button> {/* Add See More button */}
+
       </div>
       <Footer />
     </div>
