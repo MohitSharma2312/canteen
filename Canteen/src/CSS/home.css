@@ -2,9 +2,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0%;
 }
-
 /* Navbar styles */
 .navbar {
   position: fixed;
@@ -226,6 +225,7 @@
 
 /* Home section styles */
 .hero {
+  color:white;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -233,18 +233,88 @@
   justify-content: center;
   min-height: 100vh;
   background-image:linear-gradient(to bottom, #608F91, white);
-}
 
+}
 .hero h1 {
-  color: #333;
-  font-size: 48px;
+  color: white;
+  font-size: 700%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  text-align: left;
+  width: 10%;
+
+  white-space: normal; 
+}
+.hero {
+  color:#525050;
+  font-size: 100%;
+  font-style:italic;
+  padding: 1.5;
+  
 }
 
-.hero p {
-  color: #333;
-  font-size: 24px;
+.hero-body {
+  padding: 1.5rem;
 }
 
+.container {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-sm-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.has-text-left {
+  text-align: left;
+  padding: 1rem;
+}
+
+.has-text-right {
+  text-align: right;
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* .hero p {
+  color:#525050;
+  font-style: italic;
+  font-size: 20px;
+  text-align: left;
+  width: 67%;
+  padding: 1.5%;
+  white-space: normal;
+}
+.btn-primary{
+  float: left;
+  padding: 1.5%;
+} */
 /* Footer styles */
 .footer {
   width: 100%;
