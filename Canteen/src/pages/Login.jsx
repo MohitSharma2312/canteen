@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 //css
 import "../css/Login.css"
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -12,21 +12,26 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Validation (you can add more complex validation as needed)
+    // Validation
     if (!email.trim() || !password.trim()) {
       setErrorMessage('Please enter your email and password.');
       return;
     }
 
     // Simulated authentication (replace with your actual authentication logic)
-    const testEmail = 'test@example.com';
-    const testPassword = 'test123';
+    const testUserEmail = 'user@kiit.com';
+    const testUserPassword = 'user123';
+    const testAdminEmail = 'admin@kiit.com';
+    const testAdminPassword = 'admin123';
 
-    if (email === testEmail && password === testPassword) {
-      // Successful login (redirect, store token, etc.)
-      
-      navigate('/');
-      
+    if (email === testUserEmail && password === testUserPassword) {
+      // Successful login as user
+      onLogin('user');
+      navigate('/home');
+    } else if (email === testAdminEmail && password === testAdminPassword) {
+      // Successful login as admin
+      onLogin('admin');
+      navigate('/home');
     } else {
       setErrorMessage('Invalid email or password.');
     }
