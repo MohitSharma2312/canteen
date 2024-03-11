@@ -6,6 +6,8 @@ import Navbar from './components/navbar.jsx'; // Import Navbar
 import Home from '../src/pages/home.jsx';
 import Login from '../src/pages/Login.jsx';
 import Item from '../src/pages/item.jsx';
+import AboutUs from '../src/pages/about.jsx';
+import ContactPage from '../src/pages/contact.jsx';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Correct usage
@@ -27,9 +29,20 @@ function App() {
     
         {/* Display the login page */}
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
- <Route path="/item" 
+        
+        <Route path="/item" 
          element={
           isAuthenticated ? <Item /> : <Navigate to="/login" replace />
+          } />
+
+         <Route path="/about" 
+         element={
+          isAuthenticated ? <AboutUs /> : <Navigate to="/login" replace />
+          } />
+          
+        <Route path="/contact" 
+         element={
+          isAuthenticated ? <ContactPage /> : <Navigate to="/login" replace />
           } />
 
       </Routes>
