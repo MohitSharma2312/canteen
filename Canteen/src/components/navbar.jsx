@@ -26,6 +26,11 @@ const Navbar = ({ scrollTop, isAuthenticated, }) => {
             </Link>
           </li>
           <li className="navbar-item">
+            <Link to="/item" className="navbar-link">
+              Item
+            </Link>
+          </li>
+          <li className="navbar-item">
             <Link to="/contact" className="navbar-link">
               Contact
             </Link>

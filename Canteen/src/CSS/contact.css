@@ -1,0 +1,116 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-top: 200px;
+}
+
+.contact-image {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  flex: 2;
+  padding: 80px;
+  justify-content: center; 
+  align-items: center; 
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+
+
+.contact-form h2 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 80%; 
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form-group input[type="text"][placeholder="Address"],
+.form-group textarea[placeholder="Message"] {
+  width: 100%;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .contact-form {
+      width: 100%;
+  }
+
+  .form-group {
+      flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      width: 100%;
+  }
+}
+
+.warning {
+  color: red;
+}
+
+.success {
+  color: green;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
