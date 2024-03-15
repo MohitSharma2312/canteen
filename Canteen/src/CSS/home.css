@@ -1,3 +1,7 @@
+.wholepage{
+  background-color: #608F91;
+}
+
 /* General styles */
 * {
   box-sizing: border-box;
@@ -232,8 +236,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image:linear-gradient(to bottom, #6ea2a4, white);
-
+ 
 }
 .hero h1 {
   color: white;
@@ -246,7 +249,7 @@
   white-space: normal; 
 }
 .hero {
-  color:#525050;
+  color:black;
   font-size: 100%;
   font-style:italic;
   padding: 1.5;
@@ -278,6 +281,7 @@
 
 .container {
   max-width: 100%;
+  background-color: #608F91;
 }
 
 .row {
