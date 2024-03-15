@@ -12,7 +12,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <>
+    <div className="about">
       <div className="about-us">
         <h1>Know Us Better...</h1>
         <p className="heading-p">
@@ -45,7 +45,7 @@ const AboutUs = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

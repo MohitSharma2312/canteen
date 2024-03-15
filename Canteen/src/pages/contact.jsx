@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "../CSS/contact.css"; // Import CSS file for styling
+import contactimage from "../assets/contact.png";
 
 const ContactPage = () => {
   // State variables to hold form data
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
-  const [message, setMessage] = useState("");
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [PhoneNumber, setPhoneNumber] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Address, setAddress] = useState("");
+  const [Message, setMessage] = useState("");
   const [warning, setWarning] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -16,10 +17,10 @@ const ContactPage = () => {
     e.preventDefault();
 
     const inputs = [
-      { value: firstName, id: "firstName" },
-      { value: lastName, id: "lastName" },
-      { value: phoneNumber, id: "phoneNumber" },
-      { value: email, id: "email" },
+      { value: FirstName, id: "FirstName" },
+      { value: LastName, id: "LastName" },
+      { value: PhoneNumber, id: "PhoneNumber" },
+      { value: Email, id: "Email" },
     ];
 
     for (let i = 0; i < inputs.length; i++) {
@@ -46,23 +47,25 @@ const ContactPage = () => {
   };
 
   return (
+    <div className="contact">
     <div className="contact-container">
       <div className="contact-form">
         <h2>Contact Us</h2>
+        <div className="form-of-contact">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               id="firstName"
               type="text"
               placeholder="First Name"
-              value={firstName}
+              value={FirstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
               id="lastName"
               type="text"
               placeholder="Last Name"
-              value={lastName}
+              value={LastName}
               onChange={(e) => setLastName(e.target.value)}
             />
           </div>
@@ -71,14 +74,15 @@ const ContactPage = () => {
               id="phoneNumber"
               type="tel"
               placeholder="Phone Number"
-              value={phoneNumber}
+              value={PhoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <input
               id="email"
               type="email"
-              placeholder="Email Address"
-              value={email}
+              placeholder="email"
+              
+              value={Email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -87,7 +91,7 @@ const ContactPage = () => {
               id="address"
               type="text"
               placeholder="Address"
-              value={address}
+              value={Address}
               onChange={(e) => setAddress(e.target.value)}
             />
           </div>
@@ -95,18 +99,20 @@ const ContactPage = () => {
             <textarea
               id="message"
               placeholder="Message"
-              value={message}
+              value={Message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
           {warning && <p className="warning">{warning}</p>}
           {success && <p className="success">{success}</p>}
-          <button type="submit">Submit</button>
+          <button  type="submit">Submit</button>
         </form>
+        </div>
       </div>
       <div className="contact-image">
-        <img src="phone-image.png" alt="Phone" />
+        <img src={contactimage} alt="contact"  />
       </div>
+    </div>
     </div>
   );
 };
