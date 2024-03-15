@@ -5,7 +5,9 @@ import Footer from "../components/Footer";
 
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
-import card1 from "../assets/Humaaans - Friend Meeting.png";
+import card1 from "../assets/blue-lays.png";
+import card4 from "../assets/green-lays.png";
+import card3 from "../assets/yellow-lays.png";
 import card2 from "../assets/baking.png";
 import { useNavigate } from 'react-router-dom'; 
 const homeData = {
@@ -23,19 +25,19 @@ const homeData = {
     cardItems: [
       {
         image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
+        title: "Blue Lays",
+        description: "₹20",
       },
 
       {
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
+        image : card4 ,
+        title: "Green Lays",
+        description: "₹20",
       },
       {
-        image : card1 ,
-        title: "Card 2 Title",
-        description: "Card 2 Description",
+        image : card3 ,
+        title: "Yellow Lays",
+        description: "₹20",
       },
       
 
@@ -65,6 +67,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   };
   return (
+    <div className="wholepage">
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">
@@ -105,6 +108,7 @@ export default function Home() {
 
       </div>
       <Footer />
+    </div>
     </div>
   );
 }
