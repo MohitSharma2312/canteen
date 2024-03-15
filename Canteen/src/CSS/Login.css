@@ -8,16 +8,19 @@
     justify-content: center;
     
     min-height: 100vh;
-    background-image: url(../assets/gray_line_drawings_of_organic_shapes_background.jpg),linear-gradient(to right, rgb(153, 53, 125), rgb(30, 6, 83));
+    background-image: url(../assets/gray_line_drawings_of_organic_shapes_background.jpg);
     background-blend-mode:overlay;
+    background-color: #4A8F86;
     /* background-element: cover; */
     
   }
+
   .login h1 {
     justify-content: center;
-    padding-top: 15%;
+    padding-top: 13%;
     -webkit-text-fill-color: black;
-    font-size: 36px;
+    font-size: 40px;
+    padding-bottom: 15px;
   }
   
   form {
@@ -25,6 +28,7 @@
     justify-content: center;
     align-items: center;
     margin-left: 42.3%;
+    background-color: #272727;
     
     
     width: 300px;
@@ -32,25 +36,41 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  .password,.email{
 
+  .email {
     display: flex;
     flex-direction: column;
-    
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+
+  .password{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 5px;   
   }
   
   label {
     margin-bottom: 5px;
-    -webkit-text-fill-color: black;
+    -webkit-text-fill-color: white;
     font-weight: bold;
   }
   
-  input[type="email"], input[type="password"] {
+  input[type="email"] {
     -webkit-text-fill-color: black;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+
+  input[type="password"] {
+    -webkit-text-fill-color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 40px;
   }
   
   button[type="submit"] {
@@ -59,7 +79,7 @@
     padding: 10px 20px;
     
     width: 40%;
-    -webkit-text-fill-color: black;
+    -webkit-text-fill-color: white;
     border-radius: 120px;
     cursor: pointer;
   }
