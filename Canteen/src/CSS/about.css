@@ -1,9 +1,18 @@
+.about{
+  background-color: #608F91
+  ;
+
+}
+
+
 .about-us {
     width: 100%;
     margin: auto;
     padding: 60px;
     padding-top: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  */
+    background-color:#608F91
+    ;
   }
   
   .about-us h1 {
@@ -33,6 +42,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    background-color: #608F91
+    ;
   }
   
   .box {
@@ -42,10 +53,13 @@
     margin-right: 10px;
     margin-left: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color:white;
+
   }
   
   .box h2 {
     text-align: center;
+
   }
   
   .box p {
@@ -57,6 +71,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    background-color: #608F91
+    ;
+
   }
   
   .team-member {
@@ -67,6 +84,8 @@
     margin-left: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    background-color: white;
+
   }
   
   .team-member img {
