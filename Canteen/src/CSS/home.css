@@ -2,6 +2,7 @@
   background-color: #608F91;
 }
 
+
 /* General styles */
 * {
   box-sizing: border-box;
@@ -245,7 +246,7 @@
   font-weight: 800;
   text-align: left;
   width: 10%;
-
+ 
   white-space: normal; 
 }
 .hero {

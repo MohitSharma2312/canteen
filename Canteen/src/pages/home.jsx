@@ -67,7 +67,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   };
   return (
-
+    <div className="wholepage">
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">
@@ -109,6 +109,6 @@ export default function Home() {
       </div>
       <Footer />
     </div>
-
+ </div>
   );
 }
