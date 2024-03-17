@@ -78,19 +78,26 @@
     margin-bottom: 20px;
   }
   
-  .card .btn {
-    background-color: #007bff;
+  .check-btn {
+    display: inline-block;
+    font-size: 1em;
     color: #fff;
+    background-color: #608F91;
+    border: none;
     padding: 10px 20px;
+    text-align: center;
     text-decoration: none;
-    transition: background-color 0.5s;
-    font-weight: bolder;
-    font-size: large;
-  }
-  
-  .card .btn:hover {
-    background-color: #0056b3;
-  }
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.check-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+
   .card-grid {
     background-image: #608F91;
     display: grid;

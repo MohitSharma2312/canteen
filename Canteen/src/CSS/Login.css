@@ -23,7 +23,7 @@
     padding-bottom: 15px;
   }
   
-  form {
+  .form {
     display: fixed;
     justify-content: center;
     align-items: center;
@@ -37,14 +37,14 @@
     border-radius: 5px;
   }
 
-  .email {
+  .email1 {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
     padding-bottom: 5px;
   }
 
-  .password{
+  .password1 {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -57,7 +57,7 @@
     font-weight: bold;
   }
   
-  input[type="email"] {
+  input.email2[type="email"] {
     -webkit-text-fill-color: black;
     padding: 10px;
     border: 1px solid #ccc;
@@ -65,7 +65,7 @@
     margin-bottom: 30px;
   }
 
-  input[type="password"] {
+  input.password2[type="password"] {
     -webkit-text-fill-color: black;
     padding: 10px;
     border: 1px solid #ccc;
@@ -73,7 +73,7 @@
     margin-bottom: 40px;
   }
   
-  button[type="submit"] {
+  button.submit1[type="submit"] {
     background-color: #00d1ff;
     color: white;
     padding: 10px 20px;
@@ -84,7 +84,7 @@
     cursor: pointer;
   }
   
-  button[type="submit"]:hover {
+  button.submit1[type="submit"]:hover {
     background-color: #9c1de7;
   }
   

@@ -1,14 +1,19 @@
 import React from "react";
 import "../CSS/about.css";
+import pic1 from  "../assets/MohitSharma.jpg";
+import pic2 from "../assets/SouravNarayan.jpg";
+import pic3 from "../assets/Reetika.jpg";
+import pic4 from "../assets/ParinitiSinha.jpg";
+import pic5 from "../assets/AbhishekDeep.jpg";
+
 
 const AboutUs = () => {
   const teamMembers = [
-    { name: "Mohit Sharma", image: "https://via.placeholder.com/150" },
-    { name: "Sourav Narayan", image: "https://via.placeholder.com/150" },
-    { name: "Reetika", image: "https://via.placeholder.com/150" },
-    { name: "Pariniti Sinha", image: "https://via.placeholder.com/150" },
-    { name: "Abhishek Deep", image: "https://via.placeholder.com/150" },
-    // Add more team members as needed
+    { name: "Mohit Sharma", image: pic1 },
+    { name: "Sourav Narayan", image: pic2 },
+    { name: "Reetika", image: pic3 },
+    { name: "Pariniti Sinha", image: pic4 },
+    { name: "Abhishek Deep", image: pic5},
   ];
 
   return (

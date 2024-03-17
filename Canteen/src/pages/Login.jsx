@@ -41,9 +41,9 @@ const Login = ({ onLogin }) => {
     <div className="login-container">
       <div className="login h1"><h1>Login</h1></div>
       
-      <form onSubmit={handleSubmit}>
-        <label className='email' htmlFor="email">Email:</label>
-        <input 
+      <form className='form' onSubmit={handleSubmit}>
+        <label className='email1' htmlFor="email">Email:</label>
+        <input className='email2'
           type="email"
           id="email"
           value={email}
@@ -51,8 +51,8 @@ const Login = ({ onLogin }) => {
           placeholder="Enter your email"
           required
         />
-        <label className='password' htmlFor="password">Password:</label>
-        <input
+        <label className='password1' htmlFor="password">Password:</label>
+        <input className='password2'
           type="password"
           id="password"
           value={password}
@@ -61,7 +61,7 @@ const Login = ({ onLogin }) => {
           required
         />
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <button className='submit-btn' type="submit">Login</button>
+        <button className='submit1' type="submit">Login</button>
       </form>
     </div>
   );

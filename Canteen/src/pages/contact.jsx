@@ -54,14 +54,14 @@ const ContactPage = () => {
         <div className="form-of-contact">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input
+            <input className="firstName"
               id="firstName"
               type="text"
               placeholder="First Name"
               value={FirstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
-            <input
+            <input className="lastName"
               id="lastName"
               type="text"
               placeholder="Last Name"
@@ -70,24 +70,24 @@ const ContactPage = () => {
             />
           </div>
           <div className="form-group">
-            <input
+            <input className="phoneNumber"
               id="phoneNumber"
               type="tel"
               placeholder="Phone Number"
               value={PhoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
-            <input
+            <input className="email3"
               id="email"
               type="email"
-              placeholder="email"
+              placeholder="Email"
               
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form-group">
-            <input
+            <input className="address"
               id="address"
               type="text"
               placeholder="Address"
@@ -96,7 +96,7 @@ const ContactPage = () => {
             />
           </div>
           <div className="form-group">
-            <textarea
+            <textarea className="message"
               id="message"
               placeholder="Message"
               value={Message}
@@ -105,7 +105,7 @@ const ContactPage = () => {
           </div>
           {warning && <p className="warning">{warning}</p>}
           {success && <p className="success">{success}</p>}
-          <button  type="submit">Submit</button>
+          <button  className="submit2" type="submit">Submit</button>
         </form>
         </div>
       </div>

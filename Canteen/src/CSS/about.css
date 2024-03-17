@@ -1,6 +1,6 @@
 .about{
-  background-color: #608F91
-  ;
+  background-color: #608F91;
+  padding-bottom: 30px;
 
 }
 
@@ -17,7 +17,7 @@
   
   .about-us h1 {
     text-align: center;
-    color: #333;
+    color: black;
     padding: 50px;
     padding-bottom: 25px;
   }
@@ -42,8 +42,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    background-color: #608F91
-    ;
+    background-color: #608F91;
   }
   
   .box {
@@ -89,9 +88,9 @@
   }
   
   .team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 90%; 
+    height: 250px;
+    object-fit: cover;
   }
   
   .team-member h3 {
