@@ -5,10 +5,9 @@ import Footer from "../components/Footer";
 
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
-import card1 from "../assets/blue-lays.png";
-import card4 from "../assets/green-lays.png";
-import card3 from "../assets/yellow-lays.png";
+
 import card2 from "../assets/baking.png";
+import cardItems from '../database/card_item.json';
 import { useNavigate } from 'react-router-dom'; 
 const homeData = {
   title: "COLLEGE CRAVINGS",
@@ -22,27 +21,7 @@ const homeData = {
     },
     // ... other carousel items
   ],
-    cardItems: [
-      {
-        image : card1 ,
-        title: "Blue Lays",
-        description: "₹20",
-      },
-
-      {
-        image : card4 ,
-        title: "Green Lays",
-        description: "₹20",
-      },
-      {
-        image : card3 ,
-        title: "Yellow Lays",
-        description: "₹20",
-      },
-      
-
-      // ... other card items
-    ],
+   
     Baking:[]
 };
 
@@ -96,13 +75,13 @@ export default function Home() {
       </section>
       <div className="container">
       <div className="card-grid">
-      {homeData.cardItems.map((item, index) => (
-        <div className="col-sm-4" key={index}>
-          <Card item={item} /> {/* Render Card */}
-        </div>
-      ))}
+        {cardItems.slice(0,3).map((item, index) => (
+          <div className="col-sm-4" key={index}>
+            <Card item={item} /> {/* Render Card */}
+          </div>
+        ))}
+      </div>
     </div>
-</div>
 <div className="see-more">
         <button className="details" onClick={handleSeeMore} scrollTop={scrollTop} >See More&gt;&gt;</button> {/* Add See More button */}
 
