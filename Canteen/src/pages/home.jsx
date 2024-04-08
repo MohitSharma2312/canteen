@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
+import { SplineViewer } from '@splinetool/viewer';
+
 
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
@@ -45,8 +47,11 @@ export default function Home() {
     navigate('/item'); // Navigate to Item page
     window.scrollTo(0, 0);
   };
+  
   return (
     <div className="wholepage">
+    
+<spline-viewer url="https://prod.spline.design/1Q3Q2beylZEbA8tR/scene.splinecode"></spline-viewer>
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">
