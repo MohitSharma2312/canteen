@@ -104,8 +104,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    margin-right: 10%;
     margin-bottom: 20px;
+    margin-left: -40px;
     width: 100%;
     background-color: #608F91;
   }
