@@ -2,7 +2,7 @@
     display: fixed;
     margin-left:-28.5% ;
     margin-top: -2.75%;
-    margin-bottom: -2.1%;
+    margin-bottom: 2.1%;
     margin-right: -28.5%;
     align-items: center;
     justify-content: center;
@@ -24,15 +24,15 @@
   }
   
   .form {
-    display: fixed;
+    display: grid;
     justify-content: center;
     align-items: center;
-    margin-left: 42.3%;
+    margin-left: 45.30%;
     background-color: #272727;
     
     
     width: 300px;
-    padding: 20px;
+    padding: 1%;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -74,11 +74,13 @@
   }
   
   button.submit1[type="submit"] {
+    display: grid;
+    justify-content: center;
     background-color: #00d1ff;
     color: white;
     padding: 10px 20px;
     
-    width: 40%;
+    
     -webkit-text-fill-color: white;
     border-radius: 120px;
     cursor: pointer;

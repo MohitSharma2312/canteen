@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 .about{
   background-color: #608F91;
   padding-bottom: 30px;
@@ -20,6 +24,7 @@
     color: black;
     padding: 50px;
     padding-bottom: 25px;
+    margin-top: 60px;
   }
 
   .about-us h2 {
@@ -29,6 +34,7 @@
   }
   
   .about-us .heading-p {
+    margin-top: 10px;
     font-size: 30px;
     line-height: 1.5;
   }
@@ -44,16 +50,18 @@
     margin: 20px;
     margin-top: 150px;
     background-color: #608F91;
+    margin-top: 120px;
   }
   
   .box {
     width: 30%;
     padding: 20px;
     border-radius: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     background-color:white;
+
     transition: transform 0.5s;
   }
 
@@ -75,22 +83,28 @@
   .team-container {
     display: flex;
     justify-content: space-between;
+
     background-color: #608F91;
     margin: 20px;
     margin-top: 70px;
 
+
   }
+
   
   .team-member {
     width: 30%;
     padding: 20px;
     border-radius: 20px;
+    margin-top: 30px;
     margin-right: 10px;
     margin-left: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     background-color: white;
+
     transition: transform 0.5s;
+
   }
 
   .team-member:hover {
@@ -109,7 +123,9 @@
   }
   
   .team-title h2 {
+
     margin-top: 150px;
+
     margin-bottom: -10px;
     text-align: center;
     font-size: 35px;

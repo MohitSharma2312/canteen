@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
   width: fit-content;
+
   padding:189px;
+
   padding-top: 200px;
 }
 
@@ -28,17 +30,20 @@
 
 .contact-image img {
   max-width: 800%;
-/* margin-left: -275%; */
+  /* margin-left: -275%; */
   height: auto;
   transform: scale(1.35);
   position: relative;
+
   margin-left: -20px;
   /* top: -40px; */
-}
+
 
 .contact-form {
   flex: 2;
   padding: 90px;
+  margin-top: 70px;
+  margin-left: 110px;
   justify-content: center; 
   align-items: center; 
   background-color: #f9f9f9;

@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 
+
+
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
 
@@ -12,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 const homeData = {
   title: "COLLEGE CRAVINGS",
   image : card2,
-  description: "Indule Your Taste Buds in our Vibrant College Food Court!", 
+  description: "Indulge Your Taste Buds in our Vibrant College Food Court!", 
   CarouselItems: [
     {
       image : card2,
@@ -45,8 +47,10 @@ export default function Home() {
     navigate('/item'); // Navigate to Item page
     window.scrollTo(0, 0);
   };
+  
   return (
     <div className="wholepage">
+    
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">

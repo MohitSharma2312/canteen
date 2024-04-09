@@ -21,15 +21,16 @@ const AboutUs = () => {
       <div className="about-us">
         <h1>Know Us Better...</h1>
         <p className="heading-p">
-          {/* Welcome to our website! We are a dedicated team of professionals who
-          are passionate about what we do. */}
+
           We are a team of freshers who are passionate about transforming the canteen management system. Our goal is to enhance efficiency, transparency, and customer 
           satisfaction by leveraging technology. We believe in innovation, collaboration, sustainability, and continual improvement. Join us on this exciting journey!
+
         </p>
       </div>
       <div className="container1">
         <div className="box">
           <h2>Why?</h2>
+
           <p>We're driven to transform canteen management. Our system aims to boost efficiency, transparency,
            and customer satisfaction by leveraging technology. We're committed to innovation, collaboration, sustainability, 
            and continual improvement to empower canteens for success.</p>
@@ -45,6 +46,7 @@ const AboutUs = () => {
           <p>We start by understanding what canteens need. Then, we build our system step by step, making changes along the way if needed. 
           We use simple but strong technology to keep things running smoothly and safely. We're always ready to help if there are any problems.
            After the system is set up, we listen to feedback and keep trying to make it better.</p>
+
         </div>
       </div>
       <div className="team-title">

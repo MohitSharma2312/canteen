@@ -9,6 +9,7 @@ import Item from '../src/pages/item.jsx';
 import AboutUs from '../src/pages/about.jsx';
 import ContactPage from '../src/pages/contact.jsx';
 
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Correct usage
   const [profilePic, setProfilePic] = useState(''); // Add profilePic state
@@ -21,33 +22,34 @@ function App() {
 
   return (
     <div>
-      <Routes>
-        {/* Display the home page only if authenticated */}
-        <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/login" replace />} />
-        {/* Redirect to home if already authenticated */}
-        <Route path="/" element={<Navigate to={isAuthenticated ? '/home' : '/login'} replace />} />
-    
-        {/* Display the login page */}
-        <Route path="/login" element={<Login onLogin={handleLogin} />} />
-        
-        <Route path="/item" 
-         element={
-          isAuthenticated ? <Item /> : <Navigate to="/login" replace />
-          } />
-
-         <Route path="/about" 
-         element={
-          isAuthenticated ? <AboutUs /> : <Navigate to="/login" replace />
-          } />
-          
-        <Route path="/contact" 
-         element={
-          isAuthenticated ? <ContactPage /> : <Navigate to="/login" replace />
-          } />
-
-      </Routes>
-      {/* Show the Navbar only if authenticated */}
+     
       {isAuthenticated && <Navbar isAuthenticated={isAuthenticated} profilePic={profilePic} />}
+
+        <Routes>
+          {/* Display the home page only if authenticated */}
+          <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/login" replace />} />
+          {/* Redirect to home if already authenticated */}
+          <Route path="/" element={<Navigate to={isAuthenticated ? '/home' : '/login'} replace />} />
+      
+          {/* Display the login page */}
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          
+          <Route path="/item" 
+           element={
+            isAuthenticated ? <Item /> : <Navigate to="/login" replace />
+            } />
+
+           <Route path="/about" 
+           element={
+            isAuthenticated ? <AboutUs /> : <Navigate to="/login" replace />
+            } />
+            
+          <Route path="/contact" 
+           element={
+            isAuthenticated ? <ContactPage /> : <Navigate to="/login" replace />
+            } />
+
+        </Routes>
     </div>
   );
 }
