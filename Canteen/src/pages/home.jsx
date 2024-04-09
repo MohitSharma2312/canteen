@@ -50,9 +50,8 @@ export default function Home() {
   
   return (
     <div className="wholepage">
-    
     <div className="container-fluid">
-      <Navbar scrollTop={scrollTop} />
+      
       <section id="home" className="hero is-full height">
          <div className="hero-body">
          <div className="container">

@@ -1,41 +1,38 @@
 .login-container {
-    display: fixed;
-    margin-left:-28.5% ;
-    margin-top: -2.75%;
-    margin-bottom: 2.1%;
-    margin-right: -28.5%;
-    align-items: center;
-    justify-content: center;
-    
-    min-height: 100vh;
-    background-image: url(../assets/gray_line_drawings_of_organic_shapes_background.jpg);
-    background-blend-mode:overlay;
-    background-color: #4A8F86;
-    /* background-element: cover; */
-    
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/gray_line_drawings_of_organic_shapes_background.jpg);
+  background-blend-mode: overlay;
+  background-color: #4A8F86;
+}
 
-  .login h1 {
-    justify-content: center;
-    padding-top: 13%;
-    -webkit-text-fill-color: black;
-    font-size: 40px;
-    padding-bottom: 15px;
-  }
-  
-  .form {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-left: 45.30%;
-    background-color: #272727;
-    
-    
-    width: 300px;
-    padding: 1%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+.login h1 {
+  text-align: center;
+  -webkit-text-fill-color: black;
+  font-size: 40px;
+  padding-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #272727;
+  width: 300px;
+  padding: 1%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
 
   .email1 {
     display: flex;
