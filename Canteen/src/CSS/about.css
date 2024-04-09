@@ -13,7 +13,7 @@
     width: 100%;
     margin: auto;
     padding: 60px;
-    padding-top: 30px;
+    padding-top: 100px;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  */
     background-color:#608F91
     ;
@@ -47,7 +47,8 @@
   .container1 {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin: 20px;
+    margin-top: 150px;
     background-color: #608F91;
     margin-top: 120px;
   }
@@ -60,8 +61,8 @@
     margin-left: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     background-color:white;
-    transition: transform 0.3s ease;
 
+    transition: transform 0.5s;
   }
 
   .box:hover {
@@ -82,8 +83,11 @@
   .team-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+
     background-color: #608F91;
+    margin: 20px;
+    margin-top: 70px;
+
 
   }
 
@@ -98,7 +102,8 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     background-color: white;
-    transition: transform 0.3s ease 
+
+    transition: transform 0.5s;
 
   }
 
@@ -118,7 +123,9 @@
   }
   
   .team-title h2 {
-    margin-top: 180px;
+
+    margin-top: 150px;
+
     margin-bottom: -10px;
     text-align: center;
     font-size: 35px;
