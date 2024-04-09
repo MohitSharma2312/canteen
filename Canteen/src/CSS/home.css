@@ -15,8 +15,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  
-  width: 100%;
+  margin-left: 5%;
+  width: 90%;
   height: 60px;
   /* background-image: linear-gradient(to left, rgb(91, 118, 215), rgb(59, 163, 250), rgb(55, 215, 255)); */
   background-color: #006D5B;
