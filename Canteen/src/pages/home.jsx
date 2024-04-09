@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
-import { SplineViewer } from '@splinetool/viewer';
+
 
 
 import Card from "../components/Card"; // Import your Card component
@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 const homeData = {
   title: "COLLEGE CRAVINGS",
   image : card2,
-  description: "Indule Your Taste Buds in our Vibrant College Food Court!", 
+  description: "Indulge Your Taste Buds in our Vibrant College Food Court!", 
   CarouselItems: [
     {
       image : card2,
@@ -51,7 +51,6 @@ export default function Home() {
   return (
     <div className="wholepage">
     
-<spline-viewer url="https://prod.spline.design/1Q3Q2beylZEbA8tR/scene.splinecode"></spline-viewer>
     <div className="container-fluid">
       <Navbar scrollTop={scrollTop} />
       <section id="home" className="hero is-full height">
