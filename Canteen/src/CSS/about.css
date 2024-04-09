@@ -9,7 +9,7 @@
     width: 100%;
     margin: auto;
     padding: 60px;
-    padding-top: 30px;
+    padding-top: 100px;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  */
     background-color:#608F91
     ;
@@ -30,7 +30,7 @@
   
   .about-us .heading-p {
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 
   p {
@@ -38,10 +38,11 @@
     line-height: 1.9
   }
   
-  .container {
+  .container1 {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin: 20px;
+    margin-top: 150px;
     background-color: #608F91;
   }
   
@@ -53,7 +54,12 @@
     margin-left: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     background-color:white;
+    transition: transform 0.5s;
+  }
 
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
   }
   
   .box h2 {
@@ -69,9 +75,9 @@
   .team-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    background-color: #608F91
-    ;
+    background-color: #608F91;
+    margin: 20px;
+    margin-top: 70px;
 
   }
   
@@ -84,7 +90,12 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     background-color: white;
+    transition: transform 0.5s;
+  }
 
+  .team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
   }
   
   .team-member img {
@@ -98,7 +109,7 @@
   }
   
   .team-title h2 {
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: -10px;
     text-align: center;
     font-size: 35px;
