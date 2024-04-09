@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import QRCode from 'react-qr-code'; // Add this line
 import "../CSS/cart.css";
 
 const Cart = ({ cart, setCart }) => {
@@ -7,7 +8,6 @@ const Cart = ({ cart, setCart }) => {
   cart.forEach(element => {
     total += (element.description * element.quantity)
   });
-  // const total = cart.reduce((sum, { price, quantity }) => sum + price * quantity, 0);
 
   const removeFromCart = (indexToRemove) => {
     setCart(cart.filter((_, index) => index !== indexToRemove));
@@ -20,7 +20,7 @@ const Cart = ({ cart, setCart }) => {
         : item
     ));
   };
-
+  const upiId = "mohitsharmajsrjee23@oksbi"; // Replace with your UPI ID
   return (
     <div className="cart">
       <h1>Shopping Cart</h1>
@@ -31,7 +31,7 @@ const Cart = ({ cart, setCart }) => {
               <img src={item.image} alt={item.title} />
               <div>
                 <h2>{item.title}</h2>
-                <p><span>&#8377;</span>{item.description}</p>
+                <p><span>₹</span>{item.description}</p>
                 <p>{item.foodCourt}</p>
                 <div className="quantity-selector">
                   <button onClick={() => adjustQuantity(index, Math.max(1, item.quantity - 1))}>-</button>
@@ -43,8 +43,9 @@ const Cart = ({ cart, setCart }) => {
             </div>
           ))}
           <div className="total">Total: ₹{total.toFixed(2)}</div>
-          <Link to="/payment" className="proceed-to-pay">Proceed to Pay</Link>
-        </>
+          
+          <QRCode value={`upi://pay?pa=mohitsharmajsrjee23@oksbi&pn=MohitSharma&mc=0000&tid=00000000&tr=7667189162&tn=thanks for payment &am=${total.toFixed(2)}&cu=INR&url=www.google.com`} />
+</>
       ) : (
         <p><b>Your cart is empty. Start shopping!</b></p>
       )}
