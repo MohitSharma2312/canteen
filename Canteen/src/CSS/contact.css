@@ -28,7 +28,7 @@
 
 .contact-image img {
   max-width: 800%;
-  margin-left: -275%;
+/* margin-left: -275%; */
   height: auto;
   transform: scale(1.35);
   position: relative;
@@ -43,7 +43,7 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.3);
-  margin-right: 45%;
+  margin-right: 35%;
   position: relative;
   top: -50px;
 }
