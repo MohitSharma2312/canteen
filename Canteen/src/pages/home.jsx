@@ -3,8 +3,6 @@ import Navbar from "../components/navbar";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 
-
-
 import Card from "../components/Card"; // Import your Card component
 import "../CSS/home.css";
 
@@ -80,7 +78,7 @@ export default function Home() {
       <div className="card-grid">
         {cardItems.slice(0,3).map((item, index) => (
           <div className="col-sm-4" key={index}>
-            <Card item={item} /> {/* Render Card */}
+            <Card item={item} showAddToCart={false} /> {/* Render Card */}
           </div>
         ))}
       </div>
