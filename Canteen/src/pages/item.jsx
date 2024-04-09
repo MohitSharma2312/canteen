@@ -1,15 +1,16 @@
-import React,{useState,useEffect} from 'react';
-import Card from "../components/Card"; // Import your Card component
+import React, { useState } from 'react';
+import Card from "../components/Card";
 import "../CSS/item.css";
-import cardItems from '../database/card_item.json'; // Import your JSON file
+import cardItems from '../database/card_item.json';
 
-const Item = () => {
+const Item = ({addToCart}) => {
+
   return (
     <div className="container">
       <div className="card-grid">
         {cardItems.map((item, index) => (
           <div className="col-sm-4" key={index}>
-            <Card item={item} /> {/* Render Card */}
+            <Card item={item} addToCart={addToCart} showAddToCart={true} showFoodCourtSelect={true} />
           </div>
         ))}
       </div>

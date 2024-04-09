@@ -1,37 +1,46 @@
-import React,{ useState }  from 'react';
-import "../CSS/item.css";
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-const Card = ({ item }) => {
+import "../CSS/item.css";
+
+const Card = ({ item, addToCart, showAddToCart, showFoodCourtSelect }) => {
   const navigate = useNavigate();
-  const [isPopupOpen, setIsPopupOpen] = useState(false); 
-  const handleClick = () => {
-    navigate('/item');
-  };
-  const openPopup = () => { // Add this function
-    setIsPopupOpen(true);
+  const [selectedFoodCourt, setSelectedFoodCourt] = useState(null);
+  const foodCourts = ['Food Court 1', 'Food Court 2', 'Food Court 3']; // Add your food courts here
+
+  const handleAddToCart = () => {
+    if (selectedFoodCourt) {
+      addToCart({ ...item, foodCourt: selectedFoodCourt });
+    } else {
+      alert('Please select a food court first.');
+    }
   };
 
-  const closePopup = () => { // Add this function
-    setIsPopupOpen(false);
+  const handleFoodCourtChange = (event) => {
+    setSelectedFoodCourt(event.target.value);
   };
+
   return (
-    <div className="card" >
-      <img src={item.image} alt={item.title} /> {/* Use the image from the item object */}
+    <div className="card">
+      <img src={item.image} alt={item.title} />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
-        <p className="card-text">{item.description}</p>
-        <button className='check-btn' onClick={openPopup}>Check Hostel Availability</button> 
-        {/* <a href="/billing" className="btn btn-primary">Go to Billing</a> */}
-      </div>
-      {isPopupOpen && (
-        <div className="overlay">
-          <div className="popup">
-            <h2>Availability</h2>
-            <p>Hostel: {item.hostelName}</p>
-            <button onClick={closePopup}>Close</button>
+        <p className="card-text"><span>&#8377;</span>{item.description}</p>
+        {showFoodCourtSelect && (
+          <div>
+            <select className="select-button" onChange={handleFoodCourtChange}>
+              <option value="">Select Food Court</option>
+              {foodCourts.map((foodCourt, index) => (
+                <option key={index} value={foodCourt}>{foodCourt}</option>
+              ))}
+            </select>
           </div>
-        </div>
-      )}
+        )}
+        {showAddToCart && selectedFoodCourt && (
+          <div>
+            <button className="add-to-cart-button" onClick={handleAddToCart}>Add to Cart</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

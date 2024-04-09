@@ -1,0 +1,82 @@
+.cart {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for the cart */
+    border-radius: 10px; /* Rounded corners for the cart */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Shadow for a bit of depth */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px; /* Rounded corners for the images */
+}
+
+.cart-item div {
+    flex-grow: 1;
+}
+
+.cart-item h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #343a40; /* Darker text color for better readability */
+}
+
+.cart-item p {
+    margin: 0;
+    color: #6c757d; /* Slightly lighter text color for the description */
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.quantity-selector button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #007bff; /* Blue color for the buttons */
+}
+
+.total {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #28a745; /* Green color for the total price */
+}
+
+.proceed-to-pay {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 40px auto;
+    background: #ff6347;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease; /* Transition for a smooth color change */
+}
+
+.proceed-to-pay:hover {
+    background: #dc3545; /* Darker red color when hovering over the button */
+}

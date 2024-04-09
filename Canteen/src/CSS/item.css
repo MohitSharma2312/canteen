@@ -1,5 +1,3 @@
-
-
 .item {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -7,8 +5,6 @@
     margin: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-
-
   }
   
   .card:hover {
@@ -43,7 +39,6 @@
     width: 80%;
     height: auto;
     overflow: hidden;
-    /* background: rgba(255, 255, 255, 0.1); */
     background-color: card;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
@@ -64,7 +59,7 @@
     object-fit:cover; /* This will scale the image to cover the space without distorting its aspect ratio */
   }
   
-  
+
   .card-body {
     padding: 20px;
   }
@@ -79,7 +74,7 @@
     margin-bottom: 20px;
   }
   
-  .check-btn {
+  .select-button {
     display: inline-block;
     font-size: 1em;
     color: #fff;
@@ -90,14 +85,34 @@
     text-decoration: none;
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
-.check-btn:hover {
+.select-button:hover {
     background-color: #45a049;
     color: white;
 }
 
+.add-to-cart-button {
+  display: inline-block;
+  font-size: 1em;
+  color: #fff;
+  background-color: #608F91;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049;
+  color: white;
+}
 
   .card-grid {
     background-image: #608F91;
@@ -124,10 +139,3 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .popup {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
